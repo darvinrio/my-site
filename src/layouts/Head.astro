@@ -1,9 +1,10 @@
 ---
+import '../styles/Global.css'
 export interface Props {
   title?: string;
 }
 
-const { title = "darvin.dev" } = Astro.props as Props;
+const { title = "darvin" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -18,3 +19,14 @@ const { title = "darvin.dev" } = Astro.props as Props;
     <slot />
   </body>
 </html>
+
+<style lang="css">
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>

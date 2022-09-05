@@ -1,7 +1,57 @@
 ---
+import Head from "../layouts/Head.astro";
+import "../styles/Portfolio.css";
+import ghostpng from "../imgs/ghost.png";
+import Icon from "astro-icon";
 
+import { portfolio } from "../json/portfolio";
+
+console.log(typeof ghostpng);
 ---
 
-<div>
-    Portfolio
-</div>
+<Head title={"darvin's portfolio"}>
+  <div class="pcontainer">
+    <h1 class="heading">
+      <span class="emptext">PORTFOLIO</span>
+    </h1>
+    <br />
+    <div class="flex flex-col gap-4 p-4">
+      {
+        portfolio.map((pro) => (
+          <div class="flex flex-row gap-5 bg-gray-500 rounded-lg">
+            <img
+              class="rounded-tl-lg border-2 border-gray-500 rounded-bl-lg max-w-md"
+              src={pro.img}
+              alt="ghost-hunter"
+              srcset=""
+            />
+            <div class="flex flex-col gap-3 p-5 justify-center">
+              <h1 class="text-4xl justify-self-start">
+                <span class="emp-text">{pro.header.toUpperCase()}</span>
+              </h1>
+              <p class="">{pro.desc}</p>
+              <a
+                class="w-12"
+                href={pro.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name="eva:external-link-fill" />
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Head>
+
+<style>
+  h1 .emp-text {
+    font-family: "VCR OSD Mono", sans-serif;
+  }
+
+  .pcontainer {
+    @apply container mx-auto snap-start flex flex-col gap-3 justify-center bg-gray-800 text-white;
+  }
+</style>

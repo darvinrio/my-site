@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="maincontainer relative">
+  <div class="heroheader">
+    <h1 class="heading">hey, i'm</h1>
+    <h1 class="heading">
+       <span class="emptext">DARVIN</span>
+    </h1>
+    <h2 class="subheading">
+      i usually go around as <span class="emptext">maybeYonas</span>
+    </h2>
+    <h2 class="subheading">
+      i'm an <span class="emptext">Onchain Data Analyst</span> and the occasional
+      <span class="emptext">Frontend Developer</span>
+    </h2>
+    <div class="flex gap-4">
+      <a
+        href="https://github.com/darvinrio"
+        target="_blank"
+        class="bg-white hover:bg-slate-400 linkbutton"
+      >
+        <Icon name="akar-icons:github-fill" />
+      </a>
+      <a
+        href="https://twitter.com/maybeYonas"
+        target="_blank"
+        class="bg-blue-400 hover:bg-blue-600 linkbutton"
+      >
+        <Icon name="akar-icons:twitter-fill" />
+      </a>
+      <a
+        href="/portfolio"
+        target="_blank"
+        class="bg-emerald-400 hover:bg-emerald-600 linkbutton"
+      >
+        <Icon name="bytesize:work" />
+      </a>
+    </div>
+    <div class="pt-4 pl-4 w-12 animate-bounce text-emerald-500">
+      <Icon name="cil:chevron-bottom" />
+    </div>
+  </div>
+</section>
+
+<style lang="css">
+  .linkbutton {
+    @apply flex justify-center items-center rounded-full h-12 w-24;
+  }
+
+  [astro-icon] {
+    height: 30px;
+  }
+  [astro-icon="akar-icons:github-fill"] {
+    color: black;
+  }
+</style>

@@ -1,61 +1,14 @@
 ---
-import Head from "../layouts/Head.astro";
+import "../styles/Index.css";
 
-import { Icon } from "astro-icon";
+import Head from "../layouts/Head.astro";
+import MainHero from "../layouts/MainHero.astro";
+import Langs from "../layouts/Langs.astro";
 ---
 
 <Head>
-  <div
-    class="flex flex-col gap-3 justify-center container mx-auto h-screen bg-gray-800 text-white"
-  >
-    <div
-      class="p-12 flex flex-col gap-6 border-4 border-transparent border-l-emerald-500"
-    >
-      <h1 class="text-7xl">hey,</h1>
-      <h1 class="text-7xl">
-        i'm
-        <span class="text-emerald-500">darvin</span>
-      </h1>
-      <h2 class="text-2xl">
-        i usually go around as <span class="text-emerald-500">maybeYonas</span>
-      </h2>
-      <!-- <hr /> -->
-      <h2 class="text-2xl">
-        i'm an <span class="text-emerald-500">Onchain Data Analyst</span> and the
-        occasional <span class="text-emerald-500">Frontend</span>
-        Developer
-      </h2>
-      <div class="flex gap-4">
-        <a
-          href="https://github.com/darvinrio"
-          target="_blank"
-          class="bg-white hover:bg-slate-400 flex justify-center items-center rounded-full h-12 w-24"
-        >
-          <Icon name="akar-icons:github-fill" />
-        </a>
-        <a
-          href="https://twitter.com/maybeYonas"
-          target="_blank"
-          class="bg-blue-400 hover:bg-blue-600 flex justify-center items-center rounded-full h-12 w-24"
-        >
-          <Icon name="akar-icons:twitter-fill" />
-        </a>
-        <a
-          href="https://twitter.com/maybeYonas"
-          target="_blank"
-          class="bg-blue-400 hover:bg-blue-600 flex justify-center items-center rounded-full h-12 w-24"
-        >
-          <Icon name="akar-icons:twitter-fill" />
-        </a>
-      </div>
-    </div>
+  <div class="snap-y snap-mandatory h-screen w-screen overflow-auto">
+    <MainHero />
+    <Langs />
   </div>
-  <style lang="css">
-    [astro-icon] {
-      height: 30px;
-    }
-    [astro-icon="akar-icons:github-fill"] {
-      color: black;
-    }
-  </style>
 </Head>

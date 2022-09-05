@@ -1,0 +1,123 @@
+---
+import { Icon } from "astro-icon";
+
+const pystuff = ["Pandas", "Mathplotlib", "Bokeh", "Selenium"];
+const jsstuff = ["Next.js", "Astro", "Chart.js", "Apollo"];
+const datastuff = ["SQL", "GraphQL", "MongoDB", "JSON-RPC"];
+---
+
+<section
+  class="noscroll snap-start snap-x flex snap-mandatory h-screen w-screen overflow-auto"
+>
+  <section class="python ycontainer">
+    <div class="heroheader">
+      <h1 class="heading">in</h1>
+      <h1 class="heading">
+        <span class="emptext">PYTHON</span>
+      </h1>
+      <h2 class="subheading">i have used</h2>
+      <ul>
+        {pystuff.map((stuff) => <li>{stuff}</li>)}
+      </ul>
+      <div class="pt-4 pl-4 w-12 animate-sidebounce text-blue-500">
+        <Icon name="cil:chevron-right" />
+      </div>
+    </div>
+  </section>
+
+  <section class="javascript ycontainer">
+    <div class="heroheader">
+      <h1 class="heading">in</h1>
+      <h1 class="heading">
+        <span class="emptext">JAVASCRIPT</span>
+      </h1>
+      <h2 class="subheading">i have used</h2>
+      <ul>
+        {jsstuff.map((stuff) => <li>{stuff}</li>)}
+      </ul>
+      <div class="pt-4 pl-4 w-12 animate-sidebounce text-amber-300">
+        <Icon name="cil:chevron-right" />
+      </div>
+    </div>
+  </section>
+
+  <section class="data ycontainer">
+    <div class="heroheader">
+      <h1 class="heading">I have</h1>
+      <h1 class="heading">
+        <span class="emptext">QUERIED DATA</span>
+      </h1>
+      <h2 class="subheading">using</h2>
+      <ul>
+        {datastuff.map((stuff) => <li>{stuff}</li>)}
+      </ul>
+      <div class="pt-4 pl-4 w-12 animate-bounce text-fuchsia-400">
+        <Icon name="cil:chevron-bottom" />
+      </div>
+    </div>
+  </section>
+</section>
+
+<style lang="css">
+  .ycontainer {
+    @apply flex-shrink-0 h-screen w-screen snap-start flex flex-col justify-center text-white;
+  }
+
+  .heroheader {
+    @apply container mx-auto;
+  }
+
+  .python .heroheader {
+    @apply border-l-blue-500;
+  }
+  .python .emptext {
+    @apply text-blue-500;
+  }
+  .python li {
+    @apply text-2xl text-blue-500;
+  }
+  .python .bgtext {
+    @apply text-blue-500;
+  }
+
+  .javascript .heroheader {
+    @apply border-l-amber-300;
+  }
+  .javascript .emptext {
+    @apply text-amber-300;
+  }
+  .javascript li {
+    @apply text-xl text-amber-300;
+  }
+  .javascript .bgtext {
+    @apply text-amber-300;
+  }
+
+  .data .heroheader {
+    @apply border-l-fuchsia-400;
+  }
+  .data .emptext {
+    @apply text-fuchsia-400;
+  }
+  .data li {
+    @apply text-xl text-fuchsia-400;
+  }
+  .data .bgtext {
+    @apply text-fuchsia-400;
+  }
+
+  @keyframes sidebounce {
+    0%,
+    100% {
+      transform: translateX(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-sidebounce {
+    animation: sidebounce 1s infinite;
+  }
+</style>

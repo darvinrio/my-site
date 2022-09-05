@@ -1,0 +1,20 @@
+---
+export interface Props {
+  href: string;
+  color?: string;
+  hovercolor?: string;
+}
+const {
+  href,
+  color = "bg-blue-400",
+  hovercolor = "bg-blue-600",
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class={`${color} hover:${hovercolor} flex justify-center items-center rounded-full h-12 w-24`}
+>
+  <slot />
+</a>

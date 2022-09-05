@@ -1,0 +1,23 @@
+@import url("http://fonts.cdnfonts.com/css/vcr-osd-mono");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+.maincontainer {
+  @apply container mx-auto snap-start flex flex-col gap-3 justify-center h-screen w-screen bg-gray-800 text-white;
+}
+
+.heading {
+  @apply text-4xl md:text-5xl lg:text-7xl;
+}
+
+h1 .emptext {
+  font-family: "VCR OSD Mono", sans-serif;
+  @apply text-5xl md:text-7xl lg:text-9xl;
+}
+
+.heroheader {
+  @apply p-12 flex flex-col gap-6 border-4 border-transparent w-screen;
+}
