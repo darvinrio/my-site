@@ -1,12 +1,13 @@
 ---
 import { Icon } from "astro-icon";
+import fs from "../imgs/tools/fs.svg";
 ---
 
 <section class="maincontainer relative">
   <div class="heroheader">
     <h1 class="heading">hey, i'm</h1>
     <h1 class="heading">
-       <span class="emptext">DARVIN</span>
+      <span class="emptext">DARVIN</span>
     </h1>
     <h2 class="subheading">
       i usually go around as <span class="emptext">maybeYonas</span>
@@ -15,6 +16,13 @@ import { Icon } from "astro-icon";
       i'm an <span class="emptext">Onchain Data Analyst</span> and the occasional
       <span class="emptext">Frontend Developer</span>
     </h2>
+    <a
+      href="/portfolio"
+      target="_blank"
+      class="bg-emerald-400 hover:bg-emerald-600 linkbuttonspl"
+    >
+      <Icon name="bytesize:work" /> {" "} Portfolio
+    </a>
     <div class="flex gap-4">
       <a
         href="https://github.com/darvinrio"
@@ -30,12 +38,13 @@ import { Icon } from "astro-icon";
       >
         <Icon name="akar-icons:twitter-fill" />
       </a>
+
       <a
-        href="/portfolio"
+        href="https://flipsidecrypto.xyz/maybeYonas-7121"
         target="_blank"
-        class="bg-emerald-400 hover:bg-emerald-600 linkbutton"
+        class="bg-white hover:bg-slate-400 linkbutton"
       >
-        <Icon name="bytesize:work" />
+        <img class="w-7" src={fs} alt="Flipside" />
       </a>
     </div>
     <div class="pt-4 pl-4 w-12 animate-bounce text-emerald-500">
@@ -47,6 +56,10 @@ import { Icon } from "astro-icon";
 <style lang="css">
   .linkbutton {
     @apply flex justify-center items-center rounded-full h-12 w-24;
+  }
+  
+  .linkbuttonspl {
+    @apply flex justify-center items-center rounded-full h-12 w-48;
   }
 
   [astro-icon] {

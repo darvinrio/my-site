@@ -1,0 +1,53 @@
+---
+import astro from "../imgs/tools/astro.svg";
+import chart from "../imgs/tools/chart.svg";
+import gql from "../imgs/tools/gql.svg";
+import js from "../imgs/tools/js.svg";
+import next from "../imgs/tools/next.svg";
+import pandas from "../imgs/tools/pandas.svg";
+import py from "../imgs/tools/py.svg";
+import react from "../imgs/tools/react.svg";
+import sql from "../imgs/tools/sql.svg";
+import fs from "../imgs/tools/fs.svg";
+
+export interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props as Props;
+let img = sql;
+switch (icon) {
+  case "astro":
+    img = astro;
+    break;
+  case "chart":
+    img = chart;
+    break;
+  case "gql":
+    img = gql;
+    break;
+  case "js":
+    img = js;
+    break;
+  case "next":
+    img = next;
+    break;
+  case "pandas":
+    img = pandas;
+    break;
+  case "py":
+    img = py;
+    break;
+  case "react":
+    img = react;
+    break;
+  case "sql":
+    img = sql;
+    break;
+  case "fs":
+    img = fs;
+    break;
+}
+---
+
+<img class="max-h-8" src={img} alt="" srcset="" />

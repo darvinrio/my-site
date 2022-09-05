@@ -1,12 +1,10 @@
 ---
 import Head from "../layouts/Head.astro";
 import "../styles/Portfolio.css";
-import ghostpng from "../imgs/ghost.png";
 import Icon from "astro-icon";
 
 import { portfolio } from "../json/portfolio";
-
-console.log(typeof ghostpng);
+import ToolsIcon from "../components/ToolsIcon.astro";
 ---
 
 <Head title={"darvin's portfolio"}>
@@ -22,7 +20,7 @@ console.log(typeof ghostpng);
             <img
               class="rounded-tl-lg border-2 border-gray-500 rounded-bl-lg max-w-md"
               src={pro.img}
-              alt="ghost-hunter"
+              alt={pro.header}
               srcset=""
             />
             <div class="flex flex-col gap-3 p-5 justify-center">
@@ -38,6 +36,11 @@ console.log(typeof ghostpng);
               >
                 <Icon name="eva:external-link-fill" />
               </a>
+              <div class="flex gap-2">
+                {pro.icons.map((icon) => (
+                  <ToolsIcon icon={icon} />
+                ))}
+              </div>
             </div>
           </div>
         ))
