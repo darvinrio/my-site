@@ -1,8 +1,15 @@
-@import url("http://fonts.cdnfonts.com/css/vcr-osd-mono");
+/* @import url("http://fonts.cdnfonts.com/css/vcr-osd-mono"); */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 body {
   font-family: "Space Mono", monospace;
+}
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/VCR_OSD_MONO.woff') format('woff');
 }
 
 .maincontainer {
