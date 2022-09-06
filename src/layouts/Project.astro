@@ -1,0 +1,55 @@
+---
+import Icon from "astro-icon";
+import ToolsIcon from "../components/ToolsIcon.astro";
+import type { proProp } from "../json/portfolio";
+
+interface Props {
+  pro: proProp;
+}
+
+const { pro } = Astro.props as Props;
+---
+
+<div class="flex flex-row gap-5 bg-gray-900 rounded-lg shadow-lg">
+  <div>
+    <a
+      class="w-12 relative group"
+      href={pro.href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="hover:blur-sm rounded-tl-lg border-2 border-gray-900 border-r-gray-900 rounded-bl-lg max-w-md"
+        src={pro.img}
+        alt={pro.header}
+        srcset=""
+      />
+      <Icon
+        class="w-12 scale-0 bottom-0 right-0 absolute group-hover:scale-100"
+        name="eva:external-link-fill"
+      />
+    </a>
+  </div>
+  <div class="flex flex-col gap-3 p-5 justify-center">
+    <h1 class="text-4xl justify-self-start">
+      <span class="emp-text">{pro.header.toUpperCase()}</span>
+    </h1>
+    <p class="">{pro.desc}</p>
+    {
+        pro.git ? 
+            <a class="w-8 hover:w-10" href={pro.git} target="_blank" rel="noopener noreferrer">
+                <Icon name="akar-icons:github-fill" />
+            </a>
+        : <></>
+    }
+    <div class="flex gap-2">
+      {pro.icons.map((icon) => <ToolsIcon icon={icon} />)}
+    </div>
+  </div>
+</div>
+
+<style>
+  h1 .emp-text {
+    font-family: "VCR OSD Mono", sans-serif;
+  }
+</style>

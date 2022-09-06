@@ -1,31 +1,12 @@
-# Astro Starter Kit: Minimal
+# `This is the source code of my website`
 
-```
-npm init astro -- --template minimal
-```
+**Scroll down to the Astro stuff section to checkout commands.**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+## `I also tend to add links here to major sites i tend to refer` 
+* Astro Icons - https://icon-sets.iconify.design/
+* Iconscout - https://iconscout.com/
+--- 
+# Astro stuff
 
 ## 🧞 Commands
 

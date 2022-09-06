@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+
+import SideBarIcon from "../components/SideBarIcon.astro";
+---
+
+<div
+  class="fixed top-0 left-0 h-screen w-20 flex flex-col bg-white dark:bg-gray-900 shadow-lg"
+>
+  <SideBarIcon text="Home">
+    <a class="sidebaricon" href="/">
+      <Icon name="ant-design:home-filled" />
+    </a>
+  </SideBarIcon>
+  <!-- <Divider /> -->
+  <SideBarIcon text="Portfolio">
+    <a class="sidebaricon" href="/portfolio">
+      <Icon name="bytesize:work" />
+    </a>
+  </SideBarIcon>
+  <!-- <SideBarIcon icon={} />
+  <SideBarIcon icon={} />
+  <Divider />
+  <SideBarIcon icon={} /> -->
+</div>
+
+<style>
+  .sidebaricon {
+    @apply h-5 w-5;
+  }
+</style>
