@@ -5,12 +5,13 @@ import "../styles/Portfolio.css";
 import { portfolio } from "../json/portfolio";
 import SideBar from "../layouts/SideBar.astro";
 import Project from "../layouts/Project.astro";
+import Icon from "astro-icon";
 ---
 
 <Head title={"darvin's portfolio"}>
   <SideBar />
   <div class="pcontainer">
-    <h1 class="heading">
+    <h1 class="heading px-4">
       <span class="emptext">PORTFOLIO</span>
     </h1>
     <br />
@@ -18,11 +19,26 @@ import Project from "../layouts/Project.astro";
       {portfolio.map((pro) => <Project pro={pro} />)}
     </div>
   </div>
+  <a
+    href="#"
+    class="topbutton animate-bounce text-white"
+  >
+    <Icon name="cil:chevron-top" />
+  </a>
 </Head>
 
 <style>
-
   .pcontainer {
-    @apply container mx-auto snap-start flex flex-col gap-3 justify-center bg-gray-800 text-white;
+    @apply mx-auto sm:ml-32 sm:mr-12 mt-10 
+      snap-start 
+      flex flex-col gap-3 justify-center 
+      bg-gray-800 text-white;
+  }
+
+  .topbutton {
+    @apply 
+      fixed right-0 bottom-0 m-10
+      flex justify-center items-center 
+      rounded-full h-12 w-12;
   }
 </style>

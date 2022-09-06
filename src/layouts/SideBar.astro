@@ -4,9 +4,7 @@ import { Icon } from "astro-icon";
 import SideBarIcon from "../components/SideBarIcon.astro";
 ---
 
-<div
-  class="fixed top-0 left-0 h-screen w-20 flex flex-col bg-white dark:bg-gray-900 shadow-lg"
->
+<div class="sidebar">
   <SideBarIcon text="Home">
     <a class="sidebaricon" href="/">
       <Icon name="ant-design:home-filled" />
@@ -25,6 +23,15 @@ import SideBarIcon from "../components/SideBarIcon.astro";
 </div>
 
 <style>
+  .sidebar {
+    @apply sm:fixed 
+      top-0 sm:left-0 
+      sm:h-screen w-screen sm:w-20 
+      flex sm:flex-col
+      bg-white dark:bg-gray-900 shadow-lg ;
+      /* sm:mb-10; */
+  }
+
   .sidebaricon {
     @apply h-5 w-5;
   }
