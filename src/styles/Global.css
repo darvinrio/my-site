@@ -26,5 +26,5 @@ h1 .emptext {
 }
 
 .heroheader {
-  @apply p-12 flex flex-col gap-6 border-4 border-transparent w-screen border-l-emerald-400;
+  @apply p-12 flex flex-col gap-6 border-4 border-transparent border-l-emerald-400;
 }
